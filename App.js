@@ -39,24 +39,24 @@ const AuthScreen = ({ navigation }) => {
   const [password, setPassword] = useState('');
 
   const signIn = async () => {
-    // Hier kannst du die Anmeldelogik implementieren, z.B. API-Aufrufe zur Authentifizierung
+    
 
-    // Beispiel: Überprüfung von Benutzername und Passwort
+    
     if (username === 'example' && password === 'password') {
-      // Authentifizierung erfolgreich, speichere den Authentifizierungsstatus
+      
       await AsyncStorage.setItem('isAuthenticated', 'true');
 
-      // Navigiere zum Home-Bildschirm
+      
       navigation.navigate('Home');
     } else {
-      // Authentifizierung fehlgeschlagen
+      
       alert('Anmeldung fehlgeschlagen');
     }
   };
 
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Geben Sie Ihre Anmeldedaten ein</Text>
+      <Text style={styles.text}>Login</Text>
       <TextInput
         placeholder="Username"
         onChangeText={(text) => setUsername(text)}
